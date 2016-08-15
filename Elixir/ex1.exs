@@ -8,7 +8,7 @@ defmodule Geometry do
          end
     
     def area({:circle,r}) do 
-        :math.pi*r*r
+        :math.pi*2*r
              end 
 end
 
