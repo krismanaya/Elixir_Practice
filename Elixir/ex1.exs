@@ -9,7 +9,7 @@ defmodule Geometry do
     
     def area({:circle,r}) do 
         :math.pi*2*r
-             end 
+         end 
 end
 
 IO.puts Geometry.area({:rectangle,2,4})
@@ -117,7 +117,6 @@ end
 
 IO.puts Power_Three_Recursion.power_three_recursion(4)
 
-
 defmodule Twenty_Times do 
     def twenty_times(n), do: twenty_times(n,0)
     def twenty_times(0, acc), do: acc 
@@ -126,4 +125,26 @@ defmodule Twenty_Times do
     end
 end 
 
+IO.puts Twenty_Times.twenty_times(3)
 
+
+defmodule Sum do 
+    def sum([],acc), do: acc
+    def sum([head | tail], acc), do: sum(tail, acc + head)
+end 
+
+IO.puts Sum.sum([1,2,3],0)
+
+defmodule Square do 
+    def square([]), do: []
+    def square([head | tail]), do: [head*head | square(tail)]
+end 
+
+Io.puts Square.square([1.2,3,4,5,6])
+
+defmodule Square_2 do 
+    def square_2([],acc) do: acc
+    def square_2([head | tail], acc), do square_2(tail, acc ++ [head * head])
+end 
+
+Io.puts Square_2.square_2([1,2,3,4,6], [])
