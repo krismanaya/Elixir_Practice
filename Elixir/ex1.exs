@@ -140,11 +140,11 @@ defmodule Square do
     def square([head | tail]), do: [head*head | square(tail)]
 end 
 
-Io.puts Square.square([1.2,3,4,5,6])
+IO.puts Square.square([1,2,3,4,5,6])
 
 defmodule Square_2 do 
-    def square_2([],acc) do: acc
+    def square_2([],acc), do: acc
     def square_2([head | tail], acc), do: square_2(tail, acc ++ [head * head])
 end 
 
-Io.puts Square_2.square_2([1,2,3,4,6], [])
+IO.puts Square_2.square_2([1,2,3,4,6], [])
