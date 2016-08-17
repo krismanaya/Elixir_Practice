@@ -118,3 +118,12 @@ end
 IO.puts Power_Three_Recursion.power_three_recursion(4)
 
 
+defmodule Twenty_Times do 
+    def twenty_times(n), do: twenty_times(n,0)
+    def twenty_times(0, acc), do: acc 
+    def twenty_times(n, acc)  do 
+        twenty_times(n-1,acc + 20)
+    end
+end 
+
+
